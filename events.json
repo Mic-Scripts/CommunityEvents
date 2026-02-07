@@ -61,47 +61,58 @@
         }
     },
     {
-        "name": "Car Spawn Test",
-        "description": "Spawns a T20, waits 5 seconds, then deletes it.",
-        "author": "Mic",
+        "name": "Test Event2",
+        "description": "asdad",
+        "author": "dasda",
         "data": {
+            "connections": [
+                {
+                    "from": "start_node",
+                    "to": "node_1770478956675"
+                },
+                {
+                    "from": "node_1770478956675",
+                    "to": "node_1770478961142"
+                },
+                {
+                    "from": "node_1770478961142",
+                    "to": "node_1770478963506"
+                },
+                {
+                    "from": "node_1770478963506",
+                    "to": "end_node"
+                }
+            ],
             "nodes": [
                 {
                     "id": "start_node",
                     "type": "start",
+                    "data": {},
                     "pos": {
-                        "x": -774,
-                        "y": -177
-                    },
-                    "data": {}
+                        "y": -177,
+                        "x": -774
+                    }
                 },
                 {
                     "id": "end_node",
                     "type": "end",
+                    "data": {},
                     "pos": {
-                        "x": 443,
-                        "y": -179
-                    },
-                    "data": {}
+                        "y": -179,
+                        "x": 443
+                    }
                 },
                 {
                     "id": "node_1770478956675",
                     "type": "spawn_vehicle",
-                    "pos": {
-                        "x": -447,
-                        "y": -260.5
-                    },
                     "data": {
-                        "x": 336.52,
-                        "y": -1395.09,
-                        "z": 32.09,
                         "coords": {
-                            "x": 336.52,
+                            "z": 32.09,
                             "y": -1395.09,
-                            "z": 32.09
+                            "x": 336.52
                         },
-                        "heading": 300,
-                        "model": "t20",
+                        "y": -1395.09,
+                        "x": 336.52,
                         "colors": {
                             "primary": [
                                 209,
@@ -113,66 +124,51 @@
                                 219,
                                 219
                             ]
-                        }
+                        },
+                        "z": 32.09,
+                        "model": "t20",
+                        "heading": 300
+                    },
+                    "pos": {
+                        "y": -260.5,
+                        "x": -447
                     }
                 },
                 {
                     "id": "node_1770478961142",
                     "type": "wait",
-                    "pos": {
-                        "x": -149,
-                        "y": -155.5
-                    },
                     "data": {
                         "seconds": 5
+                    },
+                    "pos": {
+                        "y": -155.5,
+                        "x": -149
                     }
                 },
                 {
                     "id": "node_1770478963506",
                     "type": "delete_vehicle",
-                    "pos": {
-                        "x": 153,
-                        "y": -224.5
-                    },
                     "data": {
-                        "x": 330.77,
-                        "y": -1394.98,
-                        "z": 31.51,
-                        "coords": {
-                            "x": 330.77,
-                            "y": -1394.98,
-                            "z": 31.51
-                        },
                         "showMarker": true,
+                        "coords": {
+                            "z": 31.51,
+                            "y": -1394.98,
+                            "x": 330.77
+                        },
+                        "y": -1394.98,
+                        "x": 330.77,
                         "markerSize": 5.2,
+                        "z": 31.51,
                         "markerColor": [
                             255,
                             0,
                             0
                         ]
+                    },
+                    "pos": {
+                        "y": -224.5,
+                        "x": 153
                     }
-                }
-            ],
-            "connections": [
-                {
-                    "from": "start_node",
-                    "to": "node_1770478956675",
-                    "sourcePort": null
-                },
-                {
-                    "from": "node_1770478956675",
-                    "to": "node_1770478961142",
-                    "sourcePort": null
-                },
-                {
-                    "from": "node_1770478961142",
-                    "to": "node_1770478963506",
-                    "sourcePort": null
-                },
-                {
-                    "from": "node_1770478963506",
-                    "to": "end_node",
-                    "sourcePort": null
                 }
             ]
         }
